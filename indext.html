@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="ACorder()">
+        asending order
+    </button>
+    <button onclick="DCorder()">
+        desending order
+    </button>
+  <p id="output"></p> 
+  
+  <script>
+    var num=[234,12,8,845,397,123,789,765,345,998]
+    document.getElementById("output").innerHTML = num
+
+    function ACorder()
+    {
+        num.sort(function(a,b){return a-b});
+        document.getElementById("output").innerHTML=num
+
+    }
+     function DCorder() {
+            num.sort(function (a, b) { return b - a });
+            document.getElementById("output").innerHTML = num
+
+        }
+
+
+  </script>
+</body>
+</html>
