@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sorting and Mapping</title>
+</head>
+
+<body>
+    <h1>Array Sorting and Mapping</h1>
+    <p id="originalArray"></p>
+    <p id="mappedArray"></p>
+    <p id="sortedAscending"></p>
+    <p id="sortedDescending"></p>
+    <script>
+        
+        const numbers = [10, 5, 12, 8, 3, 7];
+        document.getElementById("originalArray").innerHTML = `Original Array: ${numbers}`;
+
+       
+        const mappedArray = numbers.map(num => num * 2);
+        document.getElementById("mappedArray").innerHTML = `Mapped Array (x2): ${mappedArray}`;
+
+       
+        const ascendingOrder = [...mappedArray].sort((a, b) => a - b);
+        document.getElementById("sortedAscending").innerHTML = `Ascending Order: ${ascendingOrder}`;
+
+        
+        const descendingOrder = [...mappedArray].sort((a, b) => b - a);
+        document.getElementById("sortedDescending").innerHTML = `Descending Order: ${descendingOrder}`;
+    </script>
+</body>
+
+</html>
